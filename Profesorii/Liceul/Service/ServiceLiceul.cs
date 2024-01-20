@@ -112,7 +112,7 @@ namespace Profesorii.Liceul.Service
 
 
             }
-            return LiProf;
+            return LiProf.DescriereLiceu();
 
         }
 

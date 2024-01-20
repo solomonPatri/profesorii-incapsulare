@@ -113,8 +113,15 @@ namespace Profesorii
         }
 
 
+        public void afisareLiceuByProfesor()
+        {
+            Console.WriteLine("Introduceti specializarea profesorului respectiv: ");
+            LiceuCategory specializare = Console.ReadLine();
+            Console.WriteLine("Liceele cu specializarea astea sunt:");
+            Console.WriteLine( _serviceliceu.Organizareprofesor(specializare));
 
 
+        }
 
 
 
