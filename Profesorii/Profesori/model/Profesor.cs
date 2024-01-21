@@ -12,8 +12,8 @@ namespace Profesorii.Profesori.model
         private int _id;
         private string _nume;
         private int _studenti;
-        private double _orelucrate;
-        private string _specialitate;
+        private int _orelucrate;
+        private LiceuCategory _specialitate;
 
 
         public int Id
@@ -34,12 +34,12 @@ namespace Profesorii.Profesori.model
             set { _studenti = value; }
 
         }
-        public double Orelucrate
+        public int Orelucrate
         {
             get { return _orelucrate;}
             set { _orelucrate = value;}
         }
-        public string Specialitate
+        public LiceuCategory Specialitate
         {
             get { return _specialitate; }
             set { _specialitate = value; }
@@ -56,7 +56,7 @@ namespace Profesorii.Profesori.model
             return desc;
         }
 
-        public Profesor (int id,string nume,double orelucrate,int studenti,string materie)
+        public Profesor (int id,string nume,int orelucrate,int studenti,LiceuCategory materie)
         {
             _id = id;
             _nume = nume;

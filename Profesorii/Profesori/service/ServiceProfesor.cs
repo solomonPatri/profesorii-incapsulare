@@ -12,8 +12,7 @@ namespace Profesorii.Profesori.service
 
     public class ServiceProfesor
     {
-        private List<Profesor> _serviceprofesor;
-
+        List<Profesor> _serviceprofesor;
 
         public ServiceProfesor()
         {
@@ -51,7 +50,7 @@ namespace Profesorii.Profesori.service
             {
                 for (int j = i + 1; j < _serviceprofesor.Count; j++)
                 {
-                    if (_serviceprofesor[i].Nume > _serviceprofesor[j].Nume)
+                    if (_serviceprofesor[i].Nume.Equals(_serviceprofesor[j].Nume))
                     {
                         Profesor aux = _serviceprofesor[i];
                         _serviceprofesor[i] = _serviceprofesor[j];
@@ -89,16 +88,16 @@ namespace Profesorii.Profesori.service
         }
         public int mediaorelorlucrate()
         {
+        
             int suma = 0;
             for(int i=0;i< _serviceprofesor.Count; i++)
             {
-
-                suma += _serviceprofesor[i].Orelucrate;
+                suma = suma + _serviceprofesor.OreLucrate;
+                
             }
 
             return suma / _serviceprofesor.Count;
         }
-
         
     }
 

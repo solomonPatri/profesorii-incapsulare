@@ -11,6 +11,7 @@ namespace Profesorii.Liceu.Service
   public class ServiceLiceul
     {
         private List<Liceul> _serviceliceul;
+        
 
         public ServiceLiceul()
         {
@@ -97,25 +98,21 @@ namespace Profesorii.Liceu.Service
             return liceu;
         }
         // afisarea nr 7
-        public List<Liceul> Organizareprofesor(LiceuCategory specializare) 
+
+        public List<Liceul> Organizareprofesor(LiceuCategory Specilaizare)
         {
-            List<Liceul> LiProf = new List<Liceul>();
-
-           
-            for(int i=0;i<_serviceliceul.Count;i++)
+            List<Liceul> liceele = new List<Liceul>();
+          
+            for(int i =0;i< _serviceliceul.Count; i++)
             {
-                if (_serviceliceul[i].Specialitate.Equals(_serviceprofesor.specializare))
+                if (_serviceliceul[i].Specialitate.Equals(Specilaizare))
                 {
-                    LiProf = _serviceliceul[i];
+                    return liceele;
                 }
-
-
-
             }
-            return LiProf.Liceul;
+            return null;
 
         }
-
 
 
 

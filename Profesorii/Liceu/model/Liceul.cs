@@ -19,38 +19,38 @@ namespace Profesorii.Liceu.model
        private LiceuCategory _specialitate;
        
         
-        private int Id
+        public int Id
         {
             get { return _id; }
             set { _id = value; }
         }
 
-        private int IdProfesor
+        public int IdProfesor
         {
             get { return _idProfesor; }
             set { _idProfesor = value; }
          
         }
 
-         private string User {
+         public string User {
             get { return _user; }
             set { _user = value; }
         }
 
-        private string Password
+        public string Password
         {
             get { return _password; }
             set { _password = value; }
 
         }
 
-        private string Liceu
+        public string Liceu
         {
             get { return _liceul; }
             set { _liceul = value; }
         }
 
-        private int NrProfesor
+        public int NrProfesor
         {
             get { return _nrprofesor;}
             set { _nrprofesor = value;}

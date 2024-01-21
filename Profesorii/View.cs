@@ -62,6 +62,10 @@ namespace Profesorii
                     case 6:
                         afisaremediaoreLucrate();
                         break;
+                    case 7:
+                        afisareLiceuByProfesor();
+                        break;
+                   
 
                 }
 
@@ -71,9 +75,9 @@ namespace Profesorii
         public List<Liceul> returnliceuSpecialitate()
         {
             Console.WriteLine("Introduceti Categoria: ");
-             int specializare = int.Parse(Console.ReadLine());
+            LiceuCategory specializare = (LiceuCategory)Enum.Parse(typeof(LiceuCategory), specializare.ToString());
 
-            List<Liceul> liceulales = _serviceliceu.Returnareliceu(specializare);
+            List<Liceul> liceulales =  _serviceLiceu.Returnareliceu(specializare);
 
             return liceulales;
 
@@ -116,14 +120,20 @@ namespace Profesorii
 
         public void afisareLiceuByProfesor()
         {
+            int i = 1;
+            foreach (var SpecializareLiceu in Enum.GetValues(typeof(LiceuCategory)))
+            {
+                Console.WriteLine(i + "->" + SpecializareLiceu);
+                i++;
+            }
             Console.WriteLine("Introduceti specializarea profesorului respectiv: ");
-            LiceuCategory specializare = Console.ReadLine();
+            LiceuCategory specializare = (LiceuCategory)Enum.Parse(typeof(LiceuCategory), SpecializareLiceu.ToString());
             Console.WriteLine("Liceele cu specializarea astea sunt:");
             Console.WriteLine( _serviceliceu.Organizareprofesor(specializare));
 
 
         }
-
+       
 
 
 
