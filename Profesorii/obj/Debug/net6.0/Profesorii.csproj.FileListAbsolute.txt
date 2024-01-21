@@ -1,0 +1,4 @@
+C:\mycode\csharp\oop-basics\incapsularea\Profesorii\Profesorii\obj\Debug\net6.0\Profesorii.GeneratedMSBuildEditorConfig.editorconfig
+C:\mycode\csharp\oop-basics\incapsularea\Profesorii\Profesorii\obj\Debug\net6.0\Profesorii.AssemblyInfoInputs.cache
+C:\mycode\csharp\oop-basics\incapsularea\Profesorii\Profesorii\obj\Debug\net6.0\Profesorii.AssemblyInfo.cs
+C:\mycode\csharp\oop-basics\incapsularea\Profesorii\Profesorii\obj\Debug\net6.0\Profesorii.csproj.CoreCompileInputs.cache

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Profesorii.Liceul.model
+namespace Profesorii.Liceu.model
 {
     public enum LiceuCategory
     {

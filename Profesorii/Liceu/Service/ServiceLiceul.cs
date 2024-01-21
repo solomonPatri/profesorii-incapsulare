@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Profesorii.Liceul.model;
-using Profesorii.Profesor.service;
+using Profesorii.Liceu.model;
+using Profesorii.Profesori.service;
 
-namespace Profesorii.Liceul.Service
+namespace Profesorii.Liceu.Service
 {
   public class ServiceLiceul
     {
@@ -14,22 +14,22 @@ namespace Profesorii.Liceul.Service
 
         public ServiceLiceul()
         {
-            _serviceliceul = new List<Liceul>;
+            _serviceliceul = new List<Liceul>();
             this.load();
         }
         public void load()
         {
 
-            Liceul l1 = new Liceul(20, 1, "matei_20", "3244", "Goga", 36,"Matematica");
-            Liceul l2 = new Liceul(21, 2, "butterfly56", "23567", "Eminescu", 45,"Istorie");
-            Liceul l3 = new Liceul(22, 3, "Maria34", "23423", "Tehnic Cibinium", 23, "Geografie");
-            Liceul l4 = new Liceul(23, 4, "ioan34_5", "43445", "Lazar", 45, "Matematica");
-
+            Liceul l1 = new Liceul(20, 1, "matei_20", "3244", "Goga", 36,LiceuCategory.Matematica);
+            Liceul l2 = new Liceul(21, 2, "butterfly56", "23567", "Eminescu", 45, LiceuCategory.Istorie);
+            Liceul l3 = new Liceul(22, 3, "Maria34", "23423", "Tehnic Cibinium", 23, LiceuCategory.Geografie);
+            Liceul l4 = new Liceul(23, 4, "ioan34_5", "43445", "Lazar", 45, LiceuCategory.Matematica);
+            
 
             _serviceliceul.Add(l1);
             _serviceliceul.Add(l2);
             _serviceliceul.Add(l3);
-
+            _serviceliceul.Add(l4);
         }
         public void afisare()
         {
@@ -46,7 +46,7 @@ namespace Profesorii.Liceul.Service
 
             for(int i = 0; i < _serviceliceul.Count; i++)
             {
-                if (_serviceliceul[i].IdProf.Equals(idProf))
+                if (_serviceliceul[i].IdProfesor.Equals(idProf))
                 {
                     liceu.Add(liceu[i]);
                 }
@@ -58,11 +58,11 @@ namespace Profesorii.Liceul.Service
 
         public bool adaugare(Liceul idProf)
         {
-            List<Liceul> newliceu = FiltrareByProfesorId(idProf.IdProf);
+            List<Liceul> newliceu = FiltrareByProfesorId(idProf.IdProfesor);
 
             for(int i = 0; i < _serviceliceul.Count; i++)
             {
-                if (idProf.IdProf.Equals(newliceu[i]))
+                if (idProf.IdProfesor.Equals(newliceu[i]))
                 {
                     return false;
                 }
@@ -71,9 +71,9 @@ namespace Profesorii.Liceul.Service
             return true;
         }
 
-        public void returnareliceu(LiceuCategory specialitate)
+        public Liceul Returnareliceu(LiceuCategory specialitate)
         {
-            List<liceul> liceu = _serviceliceul;
+            List<Liceul> liceu = _serviceliceul;
             for(int i = 0; i < _serviceliceul.Count; i++)
             {
                 if (_serviceliceul[i].Specialitate == specialitate)
@@ -104,7 +104,7 @@ namespace Profesorii.Liceul.Service
            
             for(int i=0;i<_serviceliceul.Count;i++)
             {
-                if (_serviceliceul[i].Specialitate.Equal(_serviceprofesor.specializare))
+                if (_serviceliceul[i].Specialitate.Equals(_serviceprofesor.specializare))
                 {
                     LiProf = _serviceliceul[i];
                 }
@@ -112,7 +112,7 @@ namespace Profesorii.Liceul.Service
 
 
             }
-            return LiProf.DescriereLiceu();
+            return LiProf.Liceul;
 
         }
 

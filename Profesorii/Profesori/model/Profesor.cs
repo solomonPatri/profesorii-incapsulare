@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Profesorii.Liceul.model;
+using Profesorii.Liceu.model;
 
-namespace Profesorii.Profesor.model
+namespace Profesorii.Profesori.model
 {
     public class Profesor
     {
@@ -56,13 +56,14 @@ namespace Profesorii.Profesor.model
             return desc;
         }
 
-        public Profesor (int id,string nume,string materie,int studenti,double orelucrate)
+        public Profesor (int id,string nume,double orelucrate,int studenti,string materie)
         {
             _id = id;
             _nume = nume;
             _specialitate = materie;
             _studenti = studenti;  
             _orelucrate= orelucrate;
+            
 
         }
 

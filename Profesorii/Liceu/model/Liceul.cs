@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Profesorii.Liceul.model
+namespace Profesorii.Liceu.model
 {
     public  class Liceul
     {
@@ -14,8 +14,8 @@ namespace Profesorii.Liceul.model
         private string _user;
         private string _password;
         private string _liceul;
-        private int _nrprofesor=1;
-        private string departament;
+        private int _nrprofesor;
+       
        private LiceuCategory _specialitate;
        
         
@@ -25,7 +25,7 @@ namespace Profesorii.Liceul.model
             set { _id = value; }
         }
 
-        private int IdPof
+        private int IdProfesor
         {
             get { return _idProfesor; }
             set { _idProfesor = value; }

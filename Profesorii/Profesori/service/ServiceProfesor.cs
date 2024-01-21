@@ -4,10 +4,10 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
-using Profesorii.Liceul.model;
-using Profesorii.Profesor.model;
+using Profesorii.Liceu.model;
+using Profesorii.Profesori.model;
 
-namespace Profesorii.Profesor.service
+namespace Profesorii.Profesori.service
 {
 
     public class ServiceProfesor
@@ -83,11 +83,11 @@ namespace Profesorii.Profesor.service
 
             for (int i = 0; i < _serviceprofesor.Count; i++)
             {
-                suma += _serviceprofesor[i].studenti;
+                suma += _serviceprofesor[i].Studenti;
             }
             return suma;
         }
-        public int mediarelorlucrate()
+        public int mediaorelorlucrate()
         {
             int suma = 0;
             for(int i=0;i< _serviceprofesor.Count; i++)

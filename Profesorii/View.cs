@@ -1,7 +1,7 @@
-﻿using Profesorii.Liceul.model;
-using Profesorii.Liceul.Service;
-using Profesorii.Profesor.service;
-using Profesorii.Profesor.model;
+﻿using Profesorii.Liceu.model;
+using Profesorii.Liceu.Service;
+using Profesorii.Profesori.service;
+using Profesorii.Profesori.model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -73,7 +73,7 @@ namespace Profesorii
             Console.WriteLine("Introduceti Categoria: ");
              int specializare = int.Parse(Console.ReadLine());
 
-            List<Liceul> liceulales = _serviceliceu.returnareliceu(specializare);
+            List<Liceul> liceulales = _serviceliceu.Returnareliceu(specializare);
 
             return liceulales;
 
@@ -99,6 +99,7 @@ namespace Profesorii
             }
 
         }
+     
 
         public void afisarestudentiProfesorilor()
         {
@@ -109,7 +110,7 @@ namespace Profesorii
         public void afisaremediaoreLucrate()
         {
             Console.WriteLine("Media orelor lucrate sunt: ");
-            _serviceprofesor.mediarelorlucrate();
+            _serviceprofesor.mediaorelorlucrate();
         }
 
 

@@ -1,6 +1,6 @@
 ﻿using Profesorii;
-using Profesorii.Liceul.Service;
-using Profesorii.Profesor.service;
+using Profesorii.Liceu.Service;
+using Profesorii.Profesori.service;
 
 internal class Program
 {
