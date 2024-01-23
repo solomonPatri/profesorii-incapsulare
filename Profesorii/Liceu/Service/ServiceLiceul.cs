@@ -21,9 +21,9 @@ namespace Profesorii.Liceu.Service
         public void load()
         {
 
-            Liceul l1 = new Liceul(20, 1, "matei_20", "3244", "Goga", 36,LiceuCategory.Matematica);
+            Liceul l1 = new Liceul(20, 1, "matei_20", "3244", "Goga", 12,LiceuCategory.Matematica);
             Liceul l2 = new Liceul(21, 2, "butterfly56", "23567", "Eminescu", 45, LiceuCategory.Istorie);
-            Liceul l3 = new Liceul(22, 3, "Maria34", "23423", "Tehnic Cibinium", 23, LiceuCategory.Geografie);
+            Liceul l3 = new Liceul(22, 3, "Maria34", "23423", "Tehnic Cibinium", 8, LiceuCategory.Geografie);
             Liceul l4 = new Liceul(23, 4, "ioan34_5", "43445", "Lazar", 45, LiceuCategory.Matematica);
             
 
@@ -99,13 +99,13 @@ namespace Profesorii.Liceu.Service
         }
         // afisarea nr 7
 
-        public List<Liceul> Organizareprofesor(LiceuCategory Specilaizare)
+        public List<Liceul> Organizareprofesor(LiceuCategory Specializare)
         {
             List<Liceul> liceele = new List<Liceul>();
           
             for(int i =0;i< _serviceliceul.Count; i++)
             {
-                if (_serviceliceul[i].Specialitate.Equals(Specilaizare))
+                if (_serviceliceul[i].Specialitate.Equals(Specializare))
                 {
                     return liceele;
                 }
@@ -113,6 +113,38 @@ namespace Profesorii.Liceu.Service
             return null;
 
         }
+
+        public bool stergereLiceu(int nrProf,int profId)
+        {
+            List<Liceul> liceele = FiltrareByProfesorId(profId);
+            for(int i = 0; i<liceele.Count; i++)
+            {
+                if (liceele[i].NrProfesor>= nrProf)
+                {
+                    this._serviceliceul.Remove(liceele[i]);
+                    return true;
+                }
+            }
+            return false;
+
+        }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
